@@ -4,9 +4,11 @@ import 'package:get/get.dart';
 import 'intro_bottomsheet.dart';
 
 class Controller extends GetxController {
+  Controller(this.count);
+
   final TextEditingController textEditingController = TextEditingController();
 
-  int count = 0;
+  RxInt count = 0.obs;
 
   @override
   void onInit() {
@@ -17,7 +19,7 @@ class Controller extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    showIntroBottomSheet();
+    // showIntroBottomSheet();
   }
 
   @override
@@ -33,33 +35,43 @@ class Controller extends GetxController {
     setCount(value);
   }
 
-  void incrementCount() {
-    count += 1;
+  void incrementCount() => count.value++;
 
-    // If count is even, widgets with 'even' ID will update.
-    // If it is odd, widgets with 'odd' ID will update.
-    List<String> ids = count.isEven ? ['even'] : ['odd'];
+  // void incrementCount() {
+  //   count += 1;
 
-    // Widgets will only update if count is less than 10 or greater than 15.
-    bool condition = count < 10 || count > 15;
+  //   // If count is even, widgets with 'even' ID will update.
+  //   // If it is odd, widgets with 'odd' ID will update.
+  //   List<String> ids = count.isEven ? ['even'] : ['odd'];
 
-    update(ids, condition);
+  //   // Widgets will only update if count is less than 10 or greater than 15.
+  //   bool condition = count < 10 || count > 15;
 
-    textEditingController.text = count.toString();
-  }
+  //   update(ids, condition);
+
+  //   textEditingController.text = count.toString();
+  // }
 
   void setCount(int value) {
-    count = value;
+    // count = value;
 
-    // If count is even, widgets with 'even' ID will update.
-    // If it is odd, widgets with 'odd' ID will update.
-    List<String> ids = count.isEven ? ['even'] : ['odd'];
+    // // If count is even, widgets with 'even' ID will update.
+    // // If it is odd, widgets with 'odd' ID will update.
+    // List<String> ids = count.isEven ? ['even'] : ['odd'];
 
-    // Widgets will only update if count is less than 10 or greater than 15.
-    bool condition = count < 10 || count > 15;
+    // // Widgets will only update if count is less than 10 or greater than 15.
+    // bool condition = count < 10 || count > 15;
 
-    update(ids, condition);
+    // update(ids, condition);
   }
 
   void showIntroBottomSheet() => Get.bottomSheet(const IntroBottomSheet());
 }
+
+// class Controller2 extends Controller {
+//   @override
+//   void incrementCount() {
+//     print('HELLO');
+//     count.value += 2;
+//   }
+// }

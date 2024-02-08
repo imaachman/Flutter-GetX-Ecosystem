@@ -1,0 +1,1 @@
+export 'package:tamish/presentation/home/home.screen.dart';
