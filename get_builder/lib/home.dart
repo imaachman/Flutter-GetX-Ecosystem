@@ -13,35 +13,31 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('GetBuilder Demo'),
       ),
-      body: Stack(
-        children: [
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                GetBuilder<Controller>(
-                  init: Controller(),
-                  tag: 'odd',
-                  id: 'odd',
-                  builder: (controller) => CountText(
-                    count: controller.count.toString(),
-                    color: Colors.red,
-                  ),
-                ),
-                const SizedBox(width: 32),
-                GetBuilder<Controller>(
-                  init: Controller(),
-                  tag: 'even',
-                  id: 'even',
-                  builder: (controller) => CountText(
-                    count: controller.count.toString(),
-                    color: Colors.blue,
-                  ),
-                ),
-              ],
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GetBuilder<Controller>(
+              init: Controller(),
+              tag: 'odd',
+              id: 'odd',
+              builder: (controller) => CountText(
+                count: controller.count.toString(),
+                color: Colors.red,
+              ),
             ),
-          ),
-        ],
+            const SizedBox(width: 32),
+            GetBuilder<Controller>(
+              init: Controller(),
+              tag: 'even',
+              id: 'even',
+              builder: (controller) => CountText(
+                count: controller.count.toString(),
+                color: Colors.blue,
+              ),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,

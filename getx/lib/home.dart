@@ -16,15 +16,11 @@ class Home extends StatelessWidget {
           appBar: AppBar(
             title: const Text('GetX Widget Demo'),
           ),
-          body: Stack(
-            children: [
-              Center(
-                child: CountText(
-                  count: controller.count.toString(),
-                  color: Colors.blue,
-                ),
-              ),
-            ],
+          body: Center(
+            child: CountText(
+              count: controller.count.toString(),
+              color: Colors.blue,
+            ),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () => controller.incrementCount(),
