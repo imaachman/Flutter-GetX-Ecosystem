@@ -12,14 +12,4 @@ class Controller extends GetxController {
 
     update(ids);
   }
-
-  void setCount(int value) {
-    count = value;
-
-    // If count is even, widgets with 'even' ID will update.
-    // If it is odd, widgets with 'odd' ID will update.
-    List<String> ids = count.isEven ? ['even'] : ['odd'];
-
-    update(ids);
-  }
 }
