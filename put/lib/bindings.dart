@@ -6,7 +6,7 @@ class HomeBinding implements Bindings {
   @override
   void dependencies() {
     // Different instances of the same controller created using the tag.
-    Get.put<BaseController>(BaseController(), tag: 'red');
-    Get.put<BaseController>(BaseController(), tag: 'blue');
+    Get.put<Controller>(Controller(), tag: 'red');
+    Get.put<Controller>(Controller(), tag: 'blue');
   }
 }

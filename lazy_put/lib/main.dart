@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import 'bindings.dart';
 import 'home.dart';
 
-void main() => runApp(const GetPutDemo());
+void main() => runApp(const GetLazyPutDemo());
 
-class GetPutDemo extends StatelessWidget {
-  const GetPutDemo({Key? key}) : super(key: key);
+class GetLazyPutDemo extends StatelessWidget {
+  const GetLazyPutDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
