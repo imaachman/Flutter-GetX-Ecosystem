@@ -8,8 +8,8 @@ class Home extends StatelessWidget {
   Home({super.key});
 
   // Different instances of the same controller retrieved using the tag.
-  final Controller redController = Get.find<Controller>(tag: 'red');
-  final Controller blueController = Get.find<Controller>(tag: 'blue');
+  final BaseController redController = Get.find<BaseController>(tag: 'red');
+  final BaseController blueController = Get.find<BaseController>(tag: 'blue');
 
   @override
   Widget build(BuildContext context) {
