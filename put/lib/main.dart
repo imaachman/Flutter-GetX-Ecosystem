@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import 'bindings.dart';
 import 'home.dart';
 
-void main() => runApp(const BindingsDemo());
+void main() => runApp(const GetPutDemo());
 
-class BindingsDemo extends StatelessWidget {
-  const BindingsDemo({Key? key}) : super(key: key);
+class GetPutDemo extends StatelessWidget {
+  const GetPutDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class BindingsDemo extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => const Home(),
+          page: () => Home(),
           binding: HomeBinding(),
         ),
       ],
