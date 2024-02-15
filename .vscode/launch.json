@@ -1,0 +1,388 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "bindings",
+            "cwd": "bindings",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "bindings (profile mode)",
+            "cwd": "bindings",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "bindings (release mode)",
+            "cwd": "bindings",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "create",
+            "cwd": "create",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "create (profile mode)",
+            "cwd": "create",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "create (release mode)",
+            "cwd": "create",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "getx",
+            "cwd": "getx",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "getx (profile mode)",
+            "cwd": "getx",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "getx (release mode)",
+            "cwd": "getx",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "getx_controller",
+            "cwd": "getx_controller",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "getx_controller (profile mode)",
+            "cwd": "getx_controller",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "getx_controller (release mode)",
+            "cwd": "getx_controller",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "getx_service",
+            "cwd": "getx_service",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "getx_service (profile mode)",
+            "cwd": "getx_service",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "getx_service (release mode)",
+            "cwd": "getx_service",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "get_builder",
+            "cwd": "get_builder",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "get_builder (profile mode)",
+            "cwd": "get_builder",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "get_builder (release mode)",
+            "cwd": "get_builder",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "get_view",
+            "cwd": "get_view",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "get_view (profile mode)",
+            "cwd": "get_view",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "get_view (release mode)",
+            "cwd": "get_view",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "get_widget",
+            "cwd": "get_widget",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "get_widget (profile mode)",
+            "cwd": "get_widget",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "get_widget (release mode)",
+            "cwd": "get_widget",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "lazy_put",
+            "cwd": "lazy_put",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lazy_put (profile mode)",
+            "cwd": "lazy_put",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lazy_put (release mode)",
+            "cwd": "lazy_put",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "lazy_replace",
+            "cwd": "lazy_replace",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "lazy_replace (profile mode)",
+            "cwd": "lazy_replace",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "lazy_replace (release mode)",
+            "cwd": "lazy_replace",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "obx",
+            "cwd": "obx",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "obx (profile mode)",
+            "cwd": "obx",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "obx (release mode)",
+            "cwd": "obx",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "obx_value",
+            "cwd": "obx_value",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "obx_value (profile mode)",
+            "cwd": "obx_value",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "obx_value (release mode)",
+            "cwd": "obx_value",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "put",
+            "cwd": "put",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "put (profile mode)",
+            "cwd": "put",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "put (release mode)",
+            "cwd": "put",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "put_async",
+            "cwd": "put_async",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "put_async (profile mode)",
+            "cwd": "put_async",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "put_async (release mode)",
+            "cwd": "put_async",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "replace",
+            "cwd": "replace",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "replace (profile mode)",
+            "cwd": "replace",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "replace (release mode)",
+            "cwd": "replace",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "state_mixin",
+            "cwd": "state_mixin",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "state_mixin (profile mode)",
+            "cwd": "state_mixin",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "state_mixin (release mode)",
+            "cwd": "state_mixin",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "value_builder",
+            "cwd": "value_builder",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "value_builder (profile mode)",
+            "cwd": "value_builder",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "value_builder (release mode)",
+            "cwd": "value_builder",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "clean",
+            "cwd": "cli\\clean",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "clean (profile mode)",
+            "cwd": "cli\\clean",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "clean (release mode)",
+            "cwd": "cli\\clean",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "getx_pattern",
+            "cwd": "cli\\getx_pattern",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "getx_pattern (profile mode)",
+            "cwd": "cli\\getx_pattern",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "getx_pattern (release mode)",
+            "cwd": "cli\\getx_pattern",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

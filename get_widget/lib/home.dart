@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Get.create Demo'),
+        title: const Text('GetWidget Demo'),
       ),
       body: Stack(
         children: [
