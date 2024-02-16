@@ -24,7 +24,7 @@ class NavigationDemo extends StatelessWidget {
       // Making a mistake while navigating takes us to the unknown page.
       unknownRoute: GetPage(name: '/not-found', page: () => NotFoundPage()),
       getPages: [
-        GetPage(name: '/home', page: () => const HomePage()),
+        GetPage(name: '/home', page: () => const Home()),
         GetPage(name: '/login', page: () => const LoginPage()),
         GetPage(
           name: '/profile',
