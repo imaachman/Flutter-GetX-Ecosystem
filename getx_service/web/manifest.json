@@ -1,6 +1,6 @@
 {
-    "name": "getx_service",
-    "short_name": "getx_service",
+    "name": "obx",
+    "short_name": "obx",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

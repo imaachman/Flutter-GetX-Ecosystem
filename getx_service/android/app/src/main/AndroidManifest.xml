@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.getx_service">
+    package="com.example.obx">
    <application
-        android:label="getx_service"
+        android:label="obx"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

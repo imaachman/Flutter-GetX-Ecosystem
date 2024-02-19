@@ -1,4 +1,4 @@
-# getx_service
+# obx
 
 A new Flutter project.
 
