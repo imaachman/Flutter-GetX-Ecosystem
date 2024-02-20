@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
     return Obx(
       () => Scaffold(
         appBar: AppBar(
-          title: const Text('Rest API Demo (TODOs App)'),
+          title: const Text('REST API Demo (TODOs App)'),
           actions: [
             if (controller.saving.value)
               Center(
