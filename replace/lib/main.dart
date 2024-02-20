@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/counter.dart';
 
 import 'bindings.dart';
+import 'counter.dart';
 import 'home.dart';
 
 void main() => runApp(const GetReplaceDemo());
@@ -13,7 +13,7 @@ class GetReplaceDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(useMaterial3: false),
       getPages: [
         GetPage(
           name: '/',

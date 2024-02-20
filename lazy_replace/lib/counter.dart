@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/controller.dart';
-import 'package:obx_value/count_text.dart';
+
+import 'controller.dart';
+import 'count_text.dart';
 
 class CounterPage extends StatelessWidget {
   CounterPage({super.key});

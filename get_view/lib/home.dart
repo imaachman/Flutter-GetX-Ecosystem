@@ -16,6 +16,7 @@ class Home extends GetView<Controller> {
       body: Center(
         child: Obx(
           () => CountText(
+            // Use controller directly.
             count: controller.count.value.toString(),
             color: Colors.blue,
           ),

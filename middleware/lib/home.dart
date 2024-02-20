@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/controller.dart';
 
+import 'controller.dart';
 import 'labeled_switch.dart';
 
 class HomePage extends StatelessWidget {

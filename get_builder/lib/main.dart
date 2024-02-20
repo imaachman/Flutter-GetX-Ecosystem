@@ -10,8 +10,9 @@ class GetBuilderDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: Home(),
+    return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
+      home: const Home(),
     );
   }
 }

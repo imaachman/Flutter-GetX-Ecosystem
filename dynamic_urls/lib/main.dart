@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/profile.dart';
 
 import 'home.dart';
+import 'profile.dart';
 
 void main() => runApp(const DynamicURLsDemo());
 
@@ -12,6 +12,7 @@ class DynamicURLsDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
       getPages: [
         GetPage(name: '/', page: () => Home()),
         // The :user part of the path is a parameter that can be used to

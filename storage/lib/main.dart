@@ -5,6 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'home.dart';
 
 Future<void> main() async {
+  // Initialize GetStorage with the name of the storage box.
   await GetStorage.init('users');
   runApp(const StorageDemo());
 }
@@ -14,8 +15,9 @@ class StorageDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      home: Home(),
+    return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
+      home: const Home(),
     );
   }
 }

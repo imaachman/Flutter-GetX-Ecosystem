@@ -15,6 +15,7 @@ class Navigator2Demo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp.router(
+      theme: ThemeData.light(useMaterial3: false),
       // Define initial route in the routeInformationParser.
       routeInformationParser:
           Get.createInformationParser(initialRoute: '/home'),

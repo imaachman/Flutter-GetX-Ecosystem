@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/count_text.dart';
+
+import 'count_text.dart';
 
 class Counter extends StatelessWidget {
   const Counter({super.key});

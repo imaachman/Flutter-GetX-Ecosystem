@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:obx/storage_input.dart';
-import 'package:obx/storage_table.dart';
+
+import 'storage_input.dart';
+import 'storage_table.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

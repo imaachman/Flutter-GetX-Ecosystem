@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rest_api/home.dart';
+
+import 'home.dart';
 
 void main() => runApp(const GetConnectConfigurationDemo());
 
@@ -10,6 +11,7 @@ class GetConnectConfigurationDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
       home: Home(),
     );
   }

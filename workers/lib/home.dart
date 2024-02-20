@@ -58,6 +58,8 @@ class Home extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        // Count is incremented for each worker differently.
+        // Tap the button continuously and rapidly to see the difference.
         onPressed: () => controller.incrementCount(),
         child: const Icon(Icons.add),
       ),

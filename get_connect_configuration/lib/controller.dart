@@ -3,7 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
-import 'package:rest_api/todos_model.dart';
+
+import 'todos_model.dart';
 
 class Controller extends GetConnect {
   final TextEditingController titleController = TextEditingController();

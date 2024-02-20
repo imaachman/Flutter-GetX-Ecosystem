@@ -9,9 +9,9 @@ class IntroBottomSheet extends StatelessWidget {
       width: 300,
       height: 300,
       color: Colors.white,
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Text(
             'Welcome to GetxController Demo',
             style: TextStyle(

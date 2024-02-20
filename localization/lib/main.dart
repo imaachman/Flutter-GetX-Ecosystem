@@ -12,6 +12,7 @@ class LocalizationDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
       translations: TranslationData(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),

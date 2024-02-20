@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/controller.dart';
+
+import 'controller.dart';
 
 class Middleware extends GetMiddleware {
   // Uncomment the following code while using Navigator 2.0.

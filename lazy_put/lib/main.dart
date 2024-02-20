@@ -12,7 +12,8 @@ class GetLazyPutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(useMaterial3: false),
+      darkTheme: ThemeData.dark(useMaterial3: false),
       // Dependencies in HomeBinding are created based on the theme mode.
       // So, setting a different theme mode before the app starts leads to a
       // different instance of the controller being created.

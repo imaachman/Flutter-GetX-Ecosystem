@@ -22,6 +22,7 @@ class Home extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // Updates only when the count is odd.
                 GetBuilder<Controller>(
                   id: 'odd',
                   builder: (controller) => CountText(
@@ -30,6 +31,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 32),
+                // Updates only when the count is even.
                 GetBuilder<Controller>(
                   id: 'even',
                   builder: (controller) => CountText(

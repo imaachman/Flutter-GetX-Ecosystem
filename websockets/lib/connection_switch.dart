@@ -28,7 +28,8 @@ class ConnectionSwitch extends StatelessWidget {
           if (value) {
             controller.socket.connect();
           } else {
-            controller.socket.close();
+            // Status code must be 1000 when the platform is web.
+            controller.socket.close(1000);
           }
         },
       ),

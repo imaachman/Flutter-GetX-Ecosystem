@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:obx_value/counter.dart';
+
+import 'counter.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});

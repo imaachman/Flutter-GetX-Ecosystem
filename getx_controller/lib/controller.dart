@@ -23,6 +23,7 @@ class Controller extends GetxController {
   @override
   void onClose() {
     textEditingController.removeListener(onTextChanged);
+    textEditingController.dispose();
     super.onClose();
   }
 

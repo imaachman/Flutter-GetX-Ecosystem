@@ -11,7 +11,8 @@ class ObxValueDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(useMaterial3: false),
+      darkTheme: ThemeData.dark(useMaterial3: false),
       home: const Home(),
     );
   }

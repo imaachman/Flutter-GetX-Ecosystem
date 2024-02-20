@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rest_api/todos_list.dart';
 
 import 'controller.dart';
+import 'todos_list.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});

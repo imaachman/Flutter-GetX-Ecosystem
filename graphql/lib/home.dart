@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:state_mixin/product_card.dart';
 
 import 'controller.dart';
+import 'product_card.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});

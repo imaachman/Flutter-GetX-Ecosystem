@@ -28,13 +28,13 @@ class Controller extends GetxController {
     socket.on('nudge', (event) => notifyUser(event));
 
     // When the connection closes, mark the user as offline.
-    socket.onClose((close) => markUserOffline(close.message!));
+    socket.onClose((close) => markUserOffline());
 
     // Listen for errors and log them.
     socket.onError((error) => logError(error.message!));
 
     // Connect to the server.
-    await socket.connect();
+    socket.connect();
 
     super.onInit();
   }
@@ -54,6 +54,7 @@ class Controller extends GetxController {
     // Safety check for unwanted messages from server and user events.
     if (newMessage.startsWith('Request served by')) return;
     if (newMessage.startsWith('{"type":')) return;
+    if (newMessage.isEmpty) return;
     messages.add(newMessage);
   }
 
@@ -67,11 +68,11 @@ class Controller extends GetxController {
   }
 
   /// Mark the user as offline.
-  void markUserOffline(String message) {
+  void markUserOffline() {
     isOnline.value = false;
     Get.rawSnackbar(
       title: 'Disconnected',
-      message: message,
+      message: 'You are now disconnected from the server.',
       duration: const Duration(seconds: 2),
     );
   }

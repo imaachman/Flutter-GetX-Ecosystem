@@ -17,6 +17,7 @@ class NavigationDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
       // The initial route is set to '/login' so that the app starts at the
       // login page.
       initialRoute: '/login',

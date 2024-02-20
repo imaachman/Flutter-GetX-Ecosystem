@@ -11,6 +11,7 @@ class ResponsivenessDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData.light(useMaterial3: false),
       home: HomePage(
         // Define custom breakpoints for different screen sizes.
         settings: const ResponsiveScreenSettings(
