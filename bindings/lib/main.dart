@@ -16,6 +16,7 @@ class BindingsDemo extends StatelessWidget {
         GetPage(
           name: '/',
           page: () => const Home(),
+          // Bind the dependencies to the page.
           binding: HomeBinding(),
         ),
       ],

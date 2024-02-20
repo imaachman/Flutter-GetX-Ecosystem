@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = tamish
+PRODUCT_NAME = clean
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.meh.tamish
+PRODUCT_BUNDLE_IDENTIFIER = com.getxecosystem.clean
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2024 com.meh. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2024 com.getx_ecosystem. All rights reserved.

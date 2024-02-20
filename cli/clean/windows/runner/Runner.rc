@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.meh" "\0"
-            VALUE "FileDescription", "tamish" "\0"
+            VALUE "CompanyName", "com.getx_ecosystem" "\0"
+            VALUE "FileDescription", "clean" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "tamish" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.meh. All rights reserved." "\0"
-            VALUE "OriginalFilename", "tamish.exe" "\0"
-            VALUE "ProductName", "tamish" "\0"
+            VALUE "InternalName", "clean" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.getx_ecosystem. All rights reserved." "\0"
+            VALUE "OriginalFilename", "clean.exe" "\0"
+            VALUE "ProductName", "clean" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

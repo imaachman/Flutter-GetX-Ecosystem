@@ -1,6 +1,6 @@
 {
-    "name": "tamish",
-    "short_name": "tamish",
+    "name": "clean",
+    "short_name": "clean",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

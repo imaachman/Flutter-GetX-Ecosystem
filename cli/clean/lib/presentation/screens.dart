@@ -1,1 +1,1 @@
-export 'package:tamish/presentation/home/home.screen.dart';
+export 'package:clean/presentation/home/home.screen.dart';

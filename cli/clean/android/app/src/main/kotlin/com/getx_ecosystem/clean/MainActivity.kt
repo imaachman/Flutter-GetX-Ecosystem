@@ -1,4 +1,4 @@
-package com.aachman.aachman
+package com.getx_ecosystem.clean
 
 import io.flutter.embedding.android.FlutterActivity
 

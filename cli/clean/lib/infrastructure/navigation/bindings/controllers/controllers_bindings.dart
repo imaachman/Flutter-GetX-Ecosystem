@@ -1,1 +1,1 @@
-export 'package:tamish/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
+export 'package:clean/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 

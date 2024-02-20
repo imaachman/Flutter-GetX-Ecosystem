@@ -16,6 +16,8 @@ class Home extends StatelessWidget {
       body: Center(
         child: Obx(
           () => CountText(
+            // Use the controller directly because it's already initialized
+            // via bindings.
             count: Get.find<Controller>().count.value.toString(),
             color: Colors.blue,
           ),

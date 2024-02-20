@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.aachman" "\0"
-            VALUE "FileDescription", "aachman" "\0"
+            VALUE "CompanyName", "com.getx_ecosystem" "\0"
+            VALUE "FileDescription", "getx_pattern" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "aachman" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.aachman. All rights reserved." "\0"
-            VALUE "OriginalFilename", "aachman.exe" "\0"
-            VALUE "ProductName", "aachman" "\0"
+            VALUE "InternalName", "getx_pattern" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.getx_ecosystem. All rights reserved." "\0"
+            VALUE "OriginalFilename", "getx_pattern.exe" "\0"
+            VALUE "ProductName", "getx_pattern" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
