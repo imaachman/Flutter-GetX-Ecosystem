@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:state_mixin/product.dart';
 
+/// A widget that displays the product image, title, description, and price.
 class ProductCard extends StatelessWidget {
   final Product product;
 
@@ -10,6 +11,8 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      // [context.heightTransformer] is a custom extension method that divides
+      // the screen height by 4.
       height: context.heightTransformer(dividedBy: 4),
       child: Card(
         child: Column(
