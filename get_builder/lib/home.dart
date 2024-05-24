@@ -20,8 +20,10 @@ class Home extends StatelessWidget {
             // Connect to the odd controller and update the UI only when the
             // count is odd.
             GetBuilder<Controller>(
+              // Initialize the controller with the tag 'odd'.
               init: Controller(),
               tag: 'odd',
+              // Use the id 'odd' to update the UI only when the count is odd.
               id: 'odd',
               builder: (controller) => CountText(
                 count: controller.count.toString(),
@@ -32,8 +34,10 @@ class Home extends StatelessWidget {
             // Connect to the even controller and update the UI only when the
             // count is even.
             GetBuilder<Controller>(
+              // Initialize the controller with the tag 'even'.
               init: Controller(),
               tag: 'even',
+              // Use the id 'even' to update the UI only when the count is even.
               id: 'even',
               builder: (controller) => CountText(
                 count: controller.count.toString(),
@@ -48,6 +52,7 @@ class Home extends StatelessWidget {
         children: [
           // Increment the count in the odd controller.
           GetBuilder<Controller>(
+            // Connect to the odd controller with the tag 'odd'.
             tag: 'odd',
             builder: (controller) {
               return FloatingActionButton(
@@ -60,6 +65,7 @@ class Home extends StatelessWidget {
           const SizedBox(width: 24),
           // Increment the count in the even controller.
           GetBuilder<Controller>(
+            // Connect to the even controller with the tag 'even'.
             tag: 'even',
             builder: (controller) {
               return FloatingActionButton(
