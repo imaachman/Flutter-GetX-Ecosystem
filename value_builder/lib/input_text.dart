@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A stateless widget that displays the provided text.
 class InputText extends StatelessWidget {
   final String text;
 

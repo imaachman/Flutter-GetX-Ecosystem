@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A simple decorated text field.
 class InputTextField extends StatelessWidget {
   final TextEditingController textEditingController;
   final Function(String) onChanged;
