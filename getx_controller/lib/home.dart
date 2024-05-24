@@ -5,9 +5,13 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'count_text.dart';
 
+// Home widget that displays two count values with different colors. One for odd
+// and another for even. The count value can be incremented by pressing the
+// floating action button or by entering the value in the text field.
 class Home extends StatelessWidget {
   Home({super.key});
 
+  // Inject the controller with [Get.put] method.
   final Controller controller = Get.put(Controller());
 
   @override
@@ -48,6 +52,7 @@ class Home extends StatelessWidget {
             child: SizedBox(
               width: 200,
               child: TextField(
+                // Use the textEditingController from the controller.
                 controller: controller.textEditingController,
                 decoration:
                     const InputDecoration(hintText: 'Enter count value'),
@@ -60,6 +65,7 @@ class Home extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        // Increment the count value when the button is pressed.
         onPressed: () => controller.incrementCount(),
         child: const Icon(Icons.add),
       ),

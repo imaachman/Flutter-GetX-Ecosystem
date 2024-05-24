@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Widget to display the count value with the specified color.
 class CountText extends StatelessWidget {
   final String count;
   final Color color;
