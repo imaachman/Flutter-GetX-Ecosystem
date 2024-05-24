@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Widget that toggles the theme mode between light and dark and displays a
+/// message based on the current value of the switch.
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -11,10 +13,14 @@ class Home extends StatelessWidget {
         title: Text('ObxValue Demo'),
       ),
       body: Center(
+        // ObxValue is a widget that listens to an Rx value and rebuilds the
+        // wrapped widget when the value changes.
         child: ObxValue<RxBool>(
+          // [data] is the latest value after state change.
           (data) => Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              // Display a message based on the current value of the switch.
               Text(
                 data.value
                     ? 'It\'s dark in here...'
@@ -27,7 +33,10 @@ class Home extends StatelessWidget {
               ),
               SizedBox(height: 48),
               Switch(
+                // The value of the switch is bound to the Rx value.
                 value: data.value,
+                // When the switch is toggled, update the Rx value and toggle
+                // the theme mode.
                 onChanged: (value) {
                   data.value = value;
                   Get.changeThemeMode(value ? ThemeMode.dark : ThemeMode.light);
@@ -35,6 +44,7 @@ class Home extends StatelessWidget {
               ),
             ],
           ),
+          // The initial value provided to the switch.
           false.obs,
         ),
       ),
