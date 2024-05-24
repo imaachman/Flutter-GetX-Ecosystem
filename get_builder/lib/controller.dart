@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 
-// Controller class that manages the count value and updates the widgets.
+/// Controller class that manages the count value and updates the widgets.
 class Controller extends GetxController {
-  // Count value that will be displayed in the widgets.
+  /// Count value that will be displayed in the widgets.
   int count = 0;
 
-  // Method to increment the count value by 1.
+  /// Method to increment the count value by 1.
   void incrementCount() {
     count += 1;
 

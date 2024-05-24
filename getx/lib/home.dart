@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'count_text.dart';
 
-// Home widget with a counter text and a floating action button to increment the
-// counter. It uses GetX to listen to the controller and update the UI.
+/// Home widget with a counter text and a floating action button to increment the
+/// counter. It uses GetX to listen to the controller and update the UI.
 class Home extends StatelessWidget {
   const Home({super.key});
 

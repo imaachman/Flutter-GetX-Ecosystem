@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Bottomsheet widget to display the welcome message when the app is launched.
+/// Bottomsheet widget to display the welcome message when the app is launched.
 class IntroBottomSheet extends StatelessWidget {
   const IntroBottomSheet({Key? key}) : super(key: key);
 

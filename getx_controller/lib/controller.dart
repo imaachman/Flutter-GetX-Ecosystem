@@ -3,16 +3,16 @@ import 'package:get/get.dart';
 
 import 'intro_bottomsheet.dart';
 
-// Controller class that manages the count value and updates the widgets.
+/// Controller class that manages the count value and updates the widgets.
 class Controller extends GetxController {
-  // [TextEditingController] instance to get the count value from the text
-  // field.
+  /// [TextEditingController] instance to get the count value from the text
+  /// field.
   final TextEditingController textEditingController = TextEditingController();
 
-  // Count value that will be displayed in the widgets.
+  /// Count value that will be displayed in the widgets.
   int count = 0;
 
-  // Called as soon as the controller is initialized.
+  /// Called as soon as the controller is initialized.
   @override
   void onInit() {
     super.onInit();
@@ -22,7 +22,7 @@ class Controller extends GetxController {
     textEditingController.addListener(onTextChanged);
   }
 
-  // Called after the widget is rendered on the screen.
+  /// Called after the widget is rendered on the screen.
   @override
   void onReady() {
     super.onReady();
@@ -31,7 +31,7 @@ class Controller extends GetxController {
     showIntroBottomSheet();
   }
 
-  // Called when the controller is removed from the memory.
+  /// Called when the controller is removed from the memory.
   @override
   void onClose() {
     // Remove the listener from the textEditingController.
@@ -43,8 +43,8 @@ class Controller extends GetxController {
     super.onClose();
   }
 
-  // Method that is called when the text changes in the text field.
-  // It will parse the text to an integer and set the count value.
+  /// Method that is called when the text changes in the text field.
+  /// It will parse the text to an integer and set the count value.
   void onTextChanged() {
     // Get the text from the textEditingController.
     final String text = textEditingController.text;
@@ -59,7 +59,7 @@ class Controller extends GetxController {
     setCount(value);
   }
 
-  // Method to increment the count value.
+  /// Method to increment the count value.
   void incrementCount() {
     // Increment the count value.
     count += 1;
@@ -78,7 +78,7 @@ class Controller extends GetxController {
     textEditingController.text = count.toString();
   }
 
-  // Method to set the count value.
+  /// Method to set the count value.
   void setCount(int value) {
     // Set the count value.
     count = value;
@@ -94,6 +94,6 @@ class Controller extends GetxController {
     update(ids, condition);
   }
 
-  // Method to show the bottom sheet with the welcome message.
+  /// Method to show the bottom sheet with the welcome message.
   void showIntroBottomSheet() => Get.bottomSheet(const IntroBottomSheet());
 }

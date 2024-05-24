@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'count_text.dart';
 
-// Home widget with a counter and a button to increment the counter.
-// Counter value is updated using the Obx widget.
+/// Home widget with a counter and a button to increment the counter.
+/// Counter value is updated using the Obx widget.
 class Home extends StatelessWidget {
   Home({super.key});
 

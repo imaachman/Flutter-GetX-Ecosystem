@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'count_text.dart';
 
-// Home widget that displays two CountText widgets and two FloatingActionButtons
-// to increment the count in the odd and even controllers.
+/// Home widget that displays two CountText widgets and two FloatingActionButtons
+/// to increment the count in the odd and even controllers.
 class Home extends StatelessWidget {
   const Home({super.key});
 

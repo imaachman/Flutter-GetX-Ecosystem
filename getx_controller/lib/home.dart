@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'count_text.dart';
 
-// Home widget that displays two count values with different colors. One for odd
-// and another for even. The count value can be incremented by pressing the
-// floating action button or by entering the value in the text field.
+/// Home widget that displays two count values with different colors. One for odd
+/// and another for even. The count value can be incremented by pressing the
+/// floating action button or by entering the value in the text field.
 class Home extends StatelessWidget {
   Home({super.key});
 
