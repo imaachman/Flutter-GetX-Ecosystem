@@ -14,9 +14,13 @@ class GetCreateDemo extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.light(useMaterial3: false),
       getPages: [
+        // Define the home page.
         GetPage(
+          // '/' acts as the default route.
           name: '/',
+          // Map the home page to the [Home] widget.
           page: () => const Home(),
+          // Bind the [HomeBinding] to the home page route.
           binding: HomeBinding(),
         ),
       ],

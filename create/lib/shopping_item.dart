@@ -3,6 +3,14 @@ import 'package:get/get.dart';
 
 import 'controller.dart';
 
+/// Widget that displays a shopping item with increment and decrement buttons.
+///
+/// It uses two instances of the [Controller] class to manage the state of the
+/// shopping cart, one for the local state and one for the shared state.
+///
+/// The local state is used to display the quantity of this item, while the
+/// shared state is used to display the total number of items in the shopping
+/// cart.
 class ShoppingItem extends StatelessWidget {
   ShoppingItem({super.key});
 

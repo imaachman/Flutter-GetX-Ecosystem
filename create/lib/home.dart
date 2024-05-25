@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'controller.dart';
 import 'shopping_item.dart';
 
+/// Widget that displays the shopping items and the total number of items in the
+/// shopping cart.
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -21,6 +23,7 @@ class Home extends StatelessWidget {
             right: 24,
             child: Obx(
               () => Text(
+                // Retrieves the total from the shared controller instance.
                 'Total: ${Get.find<Controller>(tag: 'total').total.value}',
                 style: Get.theme.textTheme.titleLarge,
               ),
@@ -31,6 +34,7 @@ class Home extends StatelessWidget {
             child: SizedBox(
               width: 200,
               child: ListView.builder(
+                itemCount: 25,
                 itemBuilder: (context, index) {
                   return ShoppingItem();
                 },
