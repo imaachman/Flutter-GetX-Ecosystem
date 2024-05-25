@@ -14,9 +14,13 @@ class GetPutDemo extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.light(useMaterial3: false),
       getPages: [
+        // Define the home page route.
         GetPage(
+          // '/' acts as the default route path.
           name: '/',
+          // Map the page to the [Home] widget.
           page: () => Home(),
+          // Bind the dependencies to the page.
           binding: HomeBinding(),
         ),
       ],
