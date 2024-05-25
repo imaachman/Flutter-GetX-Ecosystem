@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Widget that displays the count.
 class CountText extends StatelessWidget {
   final String count;
   final Color color;
