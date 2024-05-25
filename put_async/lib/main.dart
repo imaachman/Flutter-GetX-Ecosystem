@@ -5,8 +5,8 @@ import 'controller.dart';
 import 'home.dart';
 
 Future<void> main() async {
-  // Initialize the controller and wait for it to complete before running the
-  // app.
+  // Initialize the controller asynchronously and wait for the process to
+  // complete before running the app.
   await Get.putAsync<Controller>(() => Controller().init());
   runApp(const GetPutAsyncDemo());
 }
