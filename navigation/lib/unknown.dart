@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Not found page that displays a 404 error message.
 class NotFoundPage extends StatelessWidget {
   const NotFoundPage({super.key});
 

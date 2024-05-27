@@ -25,6 +25,7 @@ class NavigationDemo extends StatelessWidget {
       // Making a mistake while navigating takes us to the unknown page.
       unknownRoute: GetPage(name: '/not-found', page: () => NotFoundPage()),
       getPages: [
+        // Define the pages that the app can navigate to.
         GetPage(name: '/home', page: () => const HomePage()),
         GetPage(name: '/login', page: () => const LoginPage()),
         GetPage(
@@ -32,6 +33,7 @@ class NavigationDemo extends StatelessWidget {
           page: () => const ProfilePage(),
 
           // Defining sub-pages lets us navigate to them using their path.
+          // For example, '/profile/edit' navigates to [ProfileEditPage].
           children: [
             GetPage(name: '/edit', page: () => const ProfileEditPage()),
             GetPage(name: '/settings', page: () => const ProfileSettingsPage()),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Profile page that navigates to the profile settings and profile edit pages.
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 

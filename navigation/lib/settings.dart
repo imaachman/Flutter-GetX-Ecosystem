@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Settings page that logs out and takes us to the login page.
+/// It demonstrates [Get.offAllNamed] and [Get.back] methods.
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 

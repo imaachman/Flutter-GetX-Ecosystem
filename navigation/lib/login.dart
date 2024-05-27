@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Login page that navigates to the home page when the login button is pressed.
+/// It demonstrates the [Get.offNamed] method.
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 

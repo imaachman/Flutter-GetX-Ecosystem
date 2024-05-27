@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Home page that navigates to the settings and profile pages.
+/// It also demonstrates what happens when a mistake is made while navigating.
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -29,6 +31,8 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 24),
 
             // Making a mistake while navigating takes us to the unknown page.
+            // As a demonstration, we are navigating to '/make-mistake' which is
+            // not defined in the app.
             ElevatedButton(
               onPressed: () => Get.toNamed('/make-mistake'),
               child: Text('Make mistake'),
