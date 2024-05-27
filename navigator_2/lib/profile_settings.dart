@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Profile settings page that demonstrates different ways to navigate to other
+/// pages. It demonstrates [Get.rootDelegate.offAndToNamed] and
+/// [Get.rootDelegate.backUntil] methods.
 class ProfileSettingsPage extends StatelessWidget {
   const ProfileSettingsPage({super.key});
 

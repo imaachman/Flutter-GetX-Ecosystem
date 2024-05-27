@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Home page that navigates to the settings and profile pages.
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

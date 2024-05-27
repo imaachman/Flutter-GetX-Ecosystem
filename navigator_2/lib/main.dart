@@ -16,16 +16,24 @@ class Navigator2Demo extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp.router(
       theme: ThemeData.light(useMaterial3: false),
-      // Define initial route in the routeInformationParser.
+
+      // Define initial route in the [routeInformationParser].
+      // [createInformationParser] is a helper method that creates a
+      // [GetRouteInformationParser] with the initial route. We provide
+      // '/home' as the initial route.
       routeInformationParser:
           Get.createInformationParser(initialRoute: '/home'),
+
       getPages: [
+        // Define all the pages in the app.
         GetPage(name: '/home', page: () => const HomePage()),
         GetPage(
           name: '/profile',
           page: () => const ProfilePage(),
 
           // Defining sub-pages lets us navigate to them using their path.
+          // For example, we can navigate to the profile edit page using
+          // '/profile/edit'.
           children: [
             GetPage(name: '/edit', page: () => const ProfileEditPage()),
             GetPage(name: '/settings', page: () => const ProfileSettingsPage()),
