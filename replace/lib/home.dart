@@ -3,6 +3,11 @@ import 'package:get/get.dart';
 
 import 'controller.dart';
 
+/// Home page of the app with a switch to replace the controller.
+/// With the switch, the controller can be replaced with either
+/// [IncrementController] or [DecrementController]. Then, the user can
+/// navigate to the counter page to see the effect of the controller.
+/// Depending on the selection, the counter will either increment or decrement.
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -30,6 +35,9 @@ class Home extends StatelessWidget {
                     onChanged: (value) {
                       data.value = value;
                       // Replace controller based on the switch value.
+                      // If the switch is on, replace the controller with
+                      // [DecrementController]. Otherwise, replace it with
+                      // [IncrementController].
                       Get.replace<BaseController>(
                         value ? DecrementController() : IncrementController(),
                       );
@@ -44,6 +52,7 @@ class Home extends StatelessWidget {
               ),
               SizedBox(height: 24),
               ElevatedButton(
+                // Navigate to the counter page.
                 onPressed: () => Get.toNamed('/counter'),
                 child: Text('Navigate to counter page'),
               ),

@@ -15,11 +15,14 @@ class GetReplaceDemo extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.light(useMaterial3: false),
       getPages: [
+        // Define home page.
         GetPage(
           name: '/',
           page: () => const Home(),
+          // Bind HomeBinding to the home page to inject the controller.
           binding: HomeBinding(),
         ),
+        // Define counter page.
         GetPage(
           name: '/counter',
           page: () => CounterPage(),
