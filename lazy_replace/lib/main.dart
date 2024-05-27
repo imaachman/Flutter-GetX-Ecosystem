@@ -15,11 +15,14 @@ class GetLazyReplaceDemo extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.light(useMaterial3: false),
       getPages: [
+        // Define the home page.
         GetPage(
           name: '/',
           page: () => const Home(),
+          // Bind the HomeBinding to the home page.
           binding: HomeBinding(),
         ),
+        // Define the counter page.
         GetPage(
           name: '/counter',
           page: () => CounterPage(),
