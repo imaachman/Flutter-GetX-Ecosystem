@@ -37,6 +37,7 @@ class Home extends StatelessWidget {
               width: 200,
               // Display a list of shopping items.
               child: ListView.builder(
+                itemCount: 25,
                 itemBuilder: (context, index) {
                   return ShoppingItem();
                 },
