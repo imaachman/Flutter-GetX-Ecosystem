@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A widget that displays the user's profile. It retrieves the user's name,
+/// age, and whether they are an author from the URL parameters.
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
@@ -11,12 +13,14 @@ class Profile extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        // Display the user's name in the app bar.
         title: Text('${parameters['user']}\'s Profile'),
       ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            // Display the user's name, age, and whether they are an author.
             Text(
               'Name: ${parameters['user']}',
               style: Get.theme.textTheme.titleLarge,

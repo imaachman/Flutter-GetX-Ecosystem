@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A widget that displays a text field to enter the user's name.
+/// When the user clicks the button, the app navigates to the profile page and
+/// passes the user's name as a parameter. The user's name is also displayed in
+/// the URL.
 class Home extends StatelessWidget {
   Home({super.key});
 
+  // A controller to access the user's name from the text field.
   final TextEditingController textEditingController = TextEditingController();
 
   @override
