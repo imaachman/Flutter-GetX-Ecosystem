@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Custom bottom sheet widget with user details and buttons to send message and
+/// follow them.
 class CustomBottomSheet extends StatelessWidget {
   const CustomBottomSheet({super.key});
 

@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import 'bottomsheet.dart';
 
+/// Home page with three buttons to show customized overlays -- snackbar,
+/// dialog, and bottom sheet.
 class Home extends StatelessWidget {
   const Home({super.key});
 
