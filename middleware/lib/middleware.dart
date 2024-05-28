@@ -75,6 +75,7 @@ class Middleware extends GetMiddleware {
 
     if (controller.setDarkMode.value) {
       // Once the page is rendered, change the theme mode to dark.
+      // [Get.engine] is same as [WidgetsFlutterBinding.ensureInitialized()].
       Get.engine.addPostFrameCallback((timeStamp) {
         Get.changeThemeMode(ThemeMode.dark);
       });
@@ -113,6 +114,10 @@ class Middleware extends GetMiddleware {
   @override
   void onPageDispose() {
     final Controller controller = Get.find();
+
+    // If dark mode is set, change the theme mode to light to put the app back
+    // to the default state.
+    if (Get.isDarkMode) Get.changeThemeMode(ThemeMode.light);
 
     if (controller.disconnect.value) {
       // Once the page is disposed, close the socket connection.
