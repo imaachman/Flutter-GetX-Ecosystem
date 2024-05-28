@@ -3,6 +3,10 @@ import 'package:get/get.dart';
 
 import 'count_text.dart';
 
+/// A page that displays a counter and a button to increment it.
+/// It retrieves the page's name from the arguments and displays it in the app
+/// bar. In addition, it returns the counter value to the previous page when the
+/// user taps the "Go back" button.
 class Counter extends StatelessWidget {
   const Counter({super.key});
 

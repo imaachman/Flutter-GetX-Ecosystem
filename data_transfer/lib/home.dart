@@ -3,9 +3,13 @@ import 'package:get/get.dart';
 
 import 'counter.dart';
 
+/// A page that displays a text field to enter a name for the counter page and a
+/// button to navigate to the counter page. It also displays the counter value
+/// returned from the counter page.
 class Home extends StatelessWidget {
   Home({super.key});
 
+  // Initialize a text editing controller to retrieve the text field's value.
   final TextEditingController textEditingController = TextEditingController();
 
   @override
@@ -45,6 +49,7 @@ class Home extends StatelessWidget {
                   child: Text('Navigate to counter page'),
                 ),
                 SizedBox(height: 24),
+                // Display the counter value returned from the counter page.
                 Text('Count: ${count.value ?? 0}',
                     style: Get.textTheme.headlineLarge),
               ],
