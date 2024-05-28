@@ -3,8 +3,12 @@ import 'package:get/get.dart';
 
 import 'controller.dart';
 
+/// Middleware class that intercepts the navigation flow and performs actions
+/// at various stages of the navigation lifecycle.
 class Middleware extends GetMiddleware {
   // Uncomment the following code while using Navigator 2.0.
+  //
+  // /// Redirects the user to the login page if they are not logged in.
   // @override
   // Future<GetNavConfig?> redirectDelegate(GetNavConfig route) async {
   //   final Controller controller = Get.find();
@@ -17,6 +21,8 @@ class Middleware extends GetMiddleware {
   //   return super.redirectDelegate(route);
   // }
 
+  /// Fetches the user's name from the controller and passes it as an argument
+  /// to the profile page.
   @override
   GetPage? onPageCalled(GetPage? page) {
     final Controller controller = Get.find();
@@ -31,6 +37,7 @@ class Middleware extends GetMiddleware {
     return super.onPageCalled(page);
   }
 
+  /// Redirects the user to the login page if they are not logged in.
   @override
   RouteSettings? redirect(String? route) {
     final Controller controller = Get.find();
@@ -43,13 +50,14 @@ class Middleware extends GetMiddleware {
     return super.redirect(route);
   }
 
+  /// Initializes the [AdminController] if the user has admin access.
   @override
   List<Bindings>? onBindingsStart(List<Bindings>? bindings) {
     final Controller controller = Get.find();
 
-    // If user has admin access, add AdminController to the list of bindings.
+    // If user has admin access, add [AdminController] to the list of bindings.
     if (controller.allowAdminAccess.value && bindings != null) {
-      // Create a new binding that initializes AdminController.
+      // Create a new binding that initializes [AdminController].
       final Bindings adminBinding = BindingsBuilder(() {
         Get.put<AdminController>(AdminController());
       });
@@ -60,6 +68,7 @@ class Middleware extends GetMiddleware {
     return super.onBindingsStart(bindings);
   }
 
+  /// Changes the theme mode to dark if the user has set the dark mode.
   @override
   GetPageBuilder? onPageBuildStart(GetPageBuilder? page) {
     final Controller controller = Get.find();
@@ -74,6 +83,7 @@ class Middleware extends GetMiddleware {
     return super.onPageBuildStart(page);
   }
 
+  /// Shows an advertisement dialog once the page is rendered.
   @override
   Widget onPageBuilt(Widget page) {
     final Controller controller = Get.find();
@@ -99,6 +109,7 @@ class Middleware extends GetMiddleware {
     return super.onPageBuilt(page);
   }
 
+  /// Closes the socket connection once the page is disposed.
   @override
   void onPageDispose() {
     final Controller controller = Get.find();

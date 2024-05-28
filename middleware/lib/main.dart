@@ -22,12 +22,14 @@ class MiddlewareDemo extends StatelessWidget {
         GetPage(
           name: '/profile',
           page: () => ProfilePage(),
+          // Attach the middleware to the profile page.
           middlewares: [Middleware()],
         ),
       ],
     );
 
     // Uncomment the following code to use Navigator 2.0.
+    //
     // return GetMaterialApp.router(
     //   theme: ThemeData.light(useMaterial3: false),
     //   darkTheme: ThemeData.dark(),
@@ -37,6 +39,7 @@ class MiddlewareDemo extends StatelessWidget {
     //     GetPage(
     //       name: '/profile',
     //       page: () => ProfilePage(),
+    //       // Attach the middleware to the profile page.
     //       middlewares: [Middleware()],
     //     ),
     //   ],

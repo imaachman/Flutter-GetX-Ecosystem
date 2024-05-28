@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A switch widget with a label to its left.
 class LabeledSwitch extends StatelessWidget {
   final String label;
   final bool value;
