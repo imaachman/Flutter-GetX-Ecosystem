@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A wrapper around the feed page that implements its own local navigation
+/// stack. This allows the feed page to navigate to the post page without
+/// affecting the global navigation stack.
 class FeedPageWrapper extends StatelessWidget {
   const FeedPageWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Use a nested navigator to manage the local navigation stack.
     return Navigator(
+      // Use [Get.nestedKey] to create a unique key for the nested navigator.
       key: Get.nestedKey(0),
+      // Define '/feed' as the initial route.
       initialRoute: '/feed',
+      // Define the routes for the nested navigator by mapping paths to pages.
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case '/feed':
@@ -26,6 +33,7 @@ class FeedPageWrapper extends StatelessWidget {
   }
 }
 
+/// Feed page that can navigate to the post page.
 class FeedPage extends StatelessWidget {
   const FeedPage({super.key});
 
@@ -38,6 +46,7 @@ class FeedPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           child: const Text('Go to Post Page'),
+          // Navigate to the post page using the nested navigator with ID 0.
           onPressed: () => Get.toNamed('/feed/post', id: 0),
         ),
       ),
@@ -45,6 +54,7 @@ class FeedPage extends StatelessWidget {
   }
 }
 
+/// Post page.
 class PostPage extends StatelessWidget {
   const PostPage({super.key});
 

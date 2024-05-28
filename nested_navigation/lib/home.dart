@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'feed.dart';
 import 'profile.dart';
 
+/// Home page with a bottom navigation bar and a page view.
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
+  // The page controller for the page view.
   final PageController pageController = PageController();
 
   @override
@@ -17,6 +19,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
+/// Bottom navigation bar with two items: Feed and Profile.
 class HomePageNavBar extends StatefulWidget {
   const HomePageNavBar({
     super.key,
@@ -30,12 +33,14 @@ class HomePageNavBar extends StatefulWidget {
 }
 
 class _HomePageNavBarState extends State<HomePageNavBar> {
+  // The current page index.
   int currentPage = 0;
 
   @override
   void initState() {
     super.initState();
 
+    // Listen to the page controller and update the current page index.
     widget.pageController.addListener(() {
       setState(() {
         currentPage = widget.pageController.page?.round() ?? 0;
@@ -57,6 +62,7 @@ class _HomePageNavBarState extends State<HomePageNavBar> {
           label: 'Profile',
         ),
       ],
+      // On tap of an item, animate to the corresponding page in the page view.
       onTap: (index) => widget.pageController.animateToPage(
         index,
         duration: const Duration(milliseconds: 500),
@@ -66,6 +72,7 @@ class _HomePageNavBarState extends State<HomePageNavBar> {
   }
 }
 
+/// Page view with two pages: Feed and Profile.
 class HomePageView extends StatelessWidget {
   const HomePageView({
     super.key,
