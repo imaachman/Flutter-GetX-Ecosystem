@@ -4,14 +4,25 @@ import 'package:get/get.dart';
 import 'components.dart';
 import 'data.dart';
 
+/// A widget that displays product information based on screen size.
+/// It uses the [GetResponsiveView] mixin to build the product view
+/// for different screen sizes, namely desktop, tablet, mobile, and watch.
 class HomePage extends GetResponsiveView {
+  // Take [settings] as a parameter to define custom breakpoints for different
+  // screen sizes.
   HomePage({super.key, super.settings});
 
+  /// An instance of [ProductData] to display product information.
   final ProductData product = ProductData();
 
+  /// Always use the builder method to return a widget irrespective of the screen
+  /// size.
   @override
   bool get alwaysUseBuilder => true;
 
+  /// The builder method returns a scaffold widget with an appbar. appbar's
+  /// title and scaffold's body are built based on the screen size. The app bar
+  /// also displays the screen width.
   @override
   Widget? builder() {
     return Scaffold(
@@ -58,6 +69,9 @@ class HomePage extends GetResponsiveView {
     );
   }
 
+  /// Returns a row widget with product image on the left and product name,
+  /// description, and like/dislike buttons on the right for desktop screen
+  /// size.
   @override
   Widget? desktop() {
     return Row(
@@ -94,6 +108,8 @@ class HomePage extends GetResponsiveView {
     );
   }
 
+  /// Returns a row widget with product image and like/dislike buttons on the
+  /// left and product name and description on the right for tablet screen size.
   @override
   Widget? tablet() {
     return Row(
@@ -138,6 +154,8 @@ class HomePage extends GetResponsiveView {
     );
   }
 
+  /// Returns a column widget with product image, name, description, and
+  /// like/dislike buttons for phone screen size.
   @override
   Widget? phone() {
     return Column(
@@ -165,6 +183,8 @@ class HomePage extends GetResponsiveView {
     );
   }
 
+  /// Returns a column widget with product image, name, and like/dislike icon
+  /// buttons for watch screen size.
   @override
   Widget? watch() {
     return Column(

@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-// Product image is wrapped with different constraints based on the screen size.
+/// A responsive widget that builds an image with constraints based on screen
+/// size.
 class ProductImage extends GetResponsiveView {
+  /// The image source URL.
   final String src;
 
   ProductImage({super.key, required this.src});
 
+  /// Builds an image widget with the given source URL.
   @override
   Widget? builder() {
     return Image.network(src, fit: BoxFit.cover);
   }
 
+  /// Returns the image widget with width constraints for desktop screens
+  /// because the image shouldn't be too wide on larger screens.
   @override
   Widget? desktop() {
     return Container(
@@ -20,6 +25,8 @@ class ProductImage extends GetResponsiveView {
     );
   }
 
+  /// Returns the image widget with height constraints for tablet screens
+  /// because the image shouldn't be too tall on portrait-oriented tablets.
   @override
   Widget? tablet() {
     return SizedBox(
@@ -28,6 +35,8 @@ class ProductImage extends GetResponsiveView {
     );
   }
 
+  /// Returns the image widget with tighter width constraints for phone screens
+  /// because the image cannot take much space on smaller screens.
   @override
   Widget? phone() {
     return Container(
@@ -37,6 +46,7 @@ class ProductImage extends GetResponsiveView {
   }
 }
 
+/// A widget that displays the product name as a stylized text.
 class ProductName extends StatelessWidget {
   final String name;
 
@@ -51,6 +61,7 @@ class ProductName extends StatelessWidget {
   }
 }
 
+/// A widget that displays the product description in a limited number of lines.
 class ProductDescription extends StatelessWidget {
   final String description;
 
@@ -67,7 +78,10 @@ class ProductDescription extends StatelessWidget {
   }
 }
 
+/// A widget that acts as the like button for the product. It can be displayed
+/// as an icon button or an elevated button based on the screen size.
 class LikeButton extends StatelessWidget {
+  /// Whether to display the button as a small icon button.
   final bool small;
 
   const LikeButton({super.key, this.small = false});
@@ -92,7 +106,10 @@ class LikeButton extends StatelessWidget {
   }
 }
 
+/// A widget that acts as the dislike button for the product. It can be
+/// displayed as an icon button or an elevated button based on the screen size.
 class DislikeButton extends StatelessWidget {
+  /// Whether to display the button as a small icon button.
   final bool small;
 
   const DislikeButton({super.key, this.small = false});

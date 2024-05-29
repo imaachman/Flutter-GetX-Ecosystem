@@ -1,3 +1,4 @@
+/// Defines the data model for the product.
 class ProductDataModel {
   final String name;
   final String image;
@@ -10,6 +11,7 @@ class ProductDataModel {
   });
 }
 
+/// Provides the product data for the app.
 class ProductData {
   ProductDataModel get desktop => ProductDataModel(
         name: 'Desktop',
