@@ -1,3 +1,4 @@
+/// Product model class.
 class Product {
   late String id;
   late String title;

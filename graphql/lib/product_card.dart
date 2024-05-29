@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'product.dart';
 
+/// A card displaying the title, description, and price of a [Product].
 class ProductCard extends StatelessWidget {
   final Product product;
 
