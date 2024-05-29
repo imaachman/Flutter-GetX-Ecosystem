@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'controller.dart';
+import 'todos_model.dart';
 
+/// Displays a list of all the todos with the ability to update their status and
+/// delete them.
 class TodosList extends StatelessWidget {
+  // Take the controller as a parameter to access the todos.
   final Controller controller;
 
   const TodosList({super.key, required this.controller});
@@ -13,10 +17,14 @@ class TodosList extends StatelessWidget {
       itemCount: controller.todos.length,
       separatorBuilder: (context, index) => const Divider(),
       itemBuilder: (context, index) {
-        final todo = controller.todos.values.toList()[index];
+        // Reverse the list to show the latest todo at the top.
+        final List<Todo> todos =
+            controller.todos.values.toList().reversed.toList();
+        // Get the todo at the current index.
+        final Todo todo = todos[index];
         return ListTile(
           title: Text(todo.title),
-          leading: Text('${index + 1}'),
+          leading: Text('${todos.length - index}'),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
             children: [

@@ -2,32 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rest_api/todos_model.dart';
 
+/// The controller class responsible for fetching and maintaining the list of
+/// todos. It allows CRUD operations of creating a new todo, updating its
+/// status, and deleting it.
 class Controller extends GetxController {
+  /// Instance of [GetConnect] to make HTTP requests.
   final GetConnect connect = GetConnect();
 
+  /// Controller for todo's title input field. Used in the todo creation dialog.
   final TextEditingController titleController = TextEditingController();
 
+  /// A map to store the list of todos fetched from the API.
+  /// The key is the todo ID, and the value is the todo object.
   final RxMap<int, Todo> todos = <int, Todo>{}.obs;
 
+  /// A boolean to indicate if the controller is saving a todo.
+  /// Used to show a saving indicator in the app bar whenever a CRUD operation
+  /// is in progress.
   final RxBool saving = false.obs;
 
   @override
   void onInit() {
+    // Fetch todos when the controller is initialized.
     fetchTodos();
     super.onInit();
   }
 
   @override
   onClose() {
+    // Dispose the title controller when the controller is closed.
     titleController.dispose();
     super.onClose();
   }
 
-  // GET request to fetch todos.
+  /// GET request to fetch todos.
   Future<void> fetchTodos() async {
     // Fetch todos from the API.
     final Response response =
         await connect.get('https://jsonplaceholder.typicode.com/todos');
+
+    // The response body is a list of todos in JSON format.
     final List data = response.body;
 
     // Populate the todos map with the fetched data.
@@ -37,7 +51,7 @@ class Controller extends GetxController {
     }
   }
 
-  // POST request to create a new todo.
+  /// POST request to create a new todo.
   Future<void> createTodo() async {
     // Set the saving state to true.
     saving.value = true;
@@ -64,6 +78,8 @@ class Controller extends GetxController {
     // But since we provided a custom decoder function, the response body is
     // decoded to a Todo object.
     final Todo newTodo = response.body;
+
+    // Add the new todo to the local todos map.
     todos[newTodo.id] = newTodo;
 
     // Clear the title input.
@@ -73,7 +89,7 @@ class Controller extends GetxController {
     saving.value = false;
   }
 
-  // PUT request to update todo status.
+  /// PUT request to update todo status.
   Future<void> updateTodoStatus(Todo todo, bool status) async {
     // Set the saving state to true.
     saving.value = true;
@@ -87,6 +103,7 @@ class Controller extends GetxController {
       todo.toJson(),
     );
 
+    // If the server request is successful.
     if (response.statusCode == 200) {
       // Update the local todos map with the updated todo.
       final Todo updatedTodo = Todo.fromJson(response.body);
@@ -100,7 +117,7 @@ class Controller extends GetxController {
     saving.value = false;
   }
 
-  // DELETE request to delete a todo.
+  /// DELETE request to delete a todo.
   Future<void> deleteTodo(Todo todo) async {
     // Set the saving state to true.
     saving.value = true;
