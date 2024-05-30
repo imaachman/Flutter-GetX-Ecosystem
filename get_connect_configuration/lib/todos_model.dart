@@ -1,3 +1,4 @@
+/// A class to represent a Todo object.
 class Todo {
   int userId;
   int id;
