@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A card that displays a label and a count with a specified color.
 class CountCard extends StatelessWidget {
   final String label;
   final String count;

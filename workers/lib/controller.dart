@@ -1,8 +1,12 @@
 import 'package:get/get.dart';
 
+/// A controller that manages the state of the counters and utilizes the [ever],
+/// [once], [debounce], and [interval] workers to increment the counters.
 class Controller extends GetxController {
+  /// The counter that the workers listen and react to.
   final RxInt count = 0.obs;
 
+  /// The counters that are incremented by the workers.
   final RxInt everCount = 0.obs;
   final RxInt onceCount = 0.obs;
   final RxInt debounceCount = 0.obs;
@@ -10,20 +14,20 @@ class Controller extends GetxController {
 
   @override
   void onInit() {
-    // Update the everCount every time the count changes.
+    /// Updates [everCount] every time [count] changes.
     ever(count, (value) => everCount.value = value);
 
-    // Update the onceCount only once when the count changes.
+    /// Updates [onceCount] only once when [count] changes.
     once(count, (value) => onceCount.value = value);
 
-    // Update the debounceCount after the count stops changing for 1 second.
+    /// Updates [debounceCount] after [count] stops changing for 1 second.
     debounce(
       count,
       (value) => debounceCount.value = value,
       time: const Duration(seconds: 1),
     );
 
-    // Update the intervalCount every second.
+    /// Updates [intervalCount] every second as long as [count] is changing.
     interval(
       count,
       (value) => intervalCount.value = value,
@@ -33,5 +37,6 @@ class Controller extends GetxController {
     super.onInit();
   }
 
+  /// Increments the [count] by 1.
   void incrementCount() => count.value++;
 }
