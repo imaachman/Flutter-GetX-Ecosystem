@@ -1,6 +1,10 @@
 import 'package:get/get.dart';
 
+/// The translations class that will be used to load the translations data.
 class TranslationData extends Translations {
+  /// The map of language codes and their respective translations.
+  /// Each language code has a map of keys and their respective translations in
+  /// that language.
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {

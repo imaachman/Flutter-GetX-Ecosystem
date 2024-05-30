@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// Home widget that displays text localized in different languages.
+/// We can change the app's locale by pressing the buttons at the bottom and
+/// see the text change accordingly.
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -17,7 +20,7 @@ class Home extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Standard translation.
+              // Standard translation with [tr] extension.
               Text(
                 'greeting'.tr,
                 style: Get.textTheme.displaySmall,
@@ -25,7 +28,9 @@ class Home extends StatelessWidget {
               ),
               SizedBox(height: 24),
 
-              // Translation with arguments.
+              // Translation with arguments with [trArgs] extension.
+              // 'Aachman' is the argument that will replace the %s in the
+              // translation.
               Text(
                 'greeting'.trArgs(['Aachman']),
                 style: Get.textTheme.displaySmall,
@@ -33,7 +38,9 @@ class Home extends StatelessWidget {
               ),
               SizedBox(height: 24),
 
-              // Translation with parameters.
+              // Translation with parameters with [trParams] extension.
+              // 'Aachman' is the parameter that will replace the @name in the
+              // translation.
               Text(
                 'welcome'.trParams({'name': 'Aachman'}),
                 style: Get.textTheme.displaySmall,
@@ -41,7 +48,9 @@ class Home extends StatelessWidget {
               ),
               SizedBox(height: 24),
 
-              // Pluralization.
+              // Pluralization with [trPlural] extension.
+              // The count is 4, so the plural form of the translation will be
+              // used and @count will be replaced by 'four'.
               Text(
                 'product'.trPluralParams('products', 4, {'count': 'four'}),
                 style: Get.textTheme.displaySmall,
@@ -51,6 +60,7 @@ class Home extends StatelessWidget {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  // Buttons to change the app's locale to different languages.
                   ElevatedButton(
                     onPressed: () => Get.updateLocale(const Locale('en', 'US')),
                     child: Text('English'),
