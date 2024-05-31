@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_service/service.dart';
 
+/// A table that displays all the key-value pairs stored in the storage,
+/// specifically the 'users' storage box. It also provides a button next to
+/// each key-value pair to delete the pair from the storage.
 class StorageTable extends StatefulWidget {
   const StorageTable({super.key});
 
@@ -10,6 +13,7 @@ class StorageTable extends StatefulWidget {
 }
 
 class _StorageTableState extends State<StorageTable> {
+  // Get the storage service instance.
   final StorageService storageService = Get.find<StorageService>();
 
   @override
@@ -40,10 +44,14 @@ class _StorageTableState extends State<StorageTable> {
             Container(),
           ],
         ),
+        // Display all key-value pairs in the storage.
+        // Get all storage keys from the storage service.
         for (final key in storageService.keys) ...[
           TableRow(
             children: [
+              // Display the key.
               TableBox(text: key),
+              // Display the value by reading the key from storage.
               TableBox(text: storageService.read(key) ?? ''),
               Container(
                 height: 48,
@@ -53,6 +61,7 @@ class _StorageTableState extends State<StorageTable> {
                 ),
                 child: OutlinedButton(
                   child: const Text('Delete'),
+                  // Delete the key-value pair from storage.
                   onPressed: () => storageService.delete(key),
                 ),
               ),
