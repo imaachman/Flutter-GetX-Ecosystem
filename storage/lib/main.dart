@@ -6,6 +6,7 @@ import 'home.dart';
 
 Future<void> main() async {
   // Initialize GetStorage with the name of the storage box.
+  // Here, we are initializing the 'users' storage box.
   await GetStorage.init('users');
   runApp(const StorageDemo());
 }

@@ -5,6 +5,8 @@ import 'package:get_storage/get_storage.dart';
 import 'storage_input.dart';
 import 'storage_table.dart';
 
+/// Home screen displaying the storage table and input fields. It also has a
+/// floating action button to delete all data from the storage.
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -20,10 +22,12 @@ class Home extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: const Column(
             children: [
+              // Display the storage table.
               StorageTable(),
               Spacer(),
               Padding(
                 padding: EdgeInsets.only(top: 16),
+                // Input fields to write key-value pairs into storage.
                 child: StorageInput(),
               ),
             ],
