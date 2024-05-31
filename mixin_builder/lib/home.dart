@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GetxController Demo'),
+        title: const Text('MixinBuilder Demo'),
       ),
       body: Stack(
         children: [
