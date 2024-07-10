@@ -15,12 +15,12 @@ class ConnectionSwitch extends StatelessWidget {
       () => Switch(
         // Set the thumb color based on the connection status.
         // Green for online and red for offline.
-        thumbColor: WidgetStateColor.resolveWith(
+        thumbColor: MaterialStateColor.resolveWith(
           (states) => controller.isOnline.value ? Colors.green : Colors.red,
         ),
         // Set the track color based on the connection status.
         // Light green for online and light red for offline.
-        trackColor: WidgetStateColor.resolveWith(
+        trackColor: MaterialStateColor.resolveWith(
           (states) => controller.isOnline.value
               ? Colors.green.shade200
               : Colors.red.shade200,
