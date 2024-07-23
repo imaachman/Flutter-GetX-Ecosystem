@@ -15,8 +15,8 @@ class CustomBottomSheet extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 50,
-            backgroundImage:
-                NetworkImage('https://source.unsplash.com/150x150/?portrait'),
+            backgroundImage: NetworkImage(
+                'https://images.unsplash.com/photo-1504257432389-52343af06ae3'),
           ),
           SizedBox(height: 16),
           Text(
