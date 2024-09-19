@@ -18,25 +18,22 @@ class ProductCard extends StatelessWidget {
       child: Card(
         child: Column(
           children: [
-            Expanded(flex: 3, child: Image.network(product.image)),
-            Expanded(
-              flex: 1,
-              child: ListTile(
-                title: Text(
-                  product.title,
-                  style: Get.theme.textTheme.labelLarge,
-                  maxLines: 1,
-                ),
-                subtitle: Text(
-                  product.description,
-                  style: Get.theme.textTheme.labelSmall,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                trailing: Text(
-                  '\$${product.price}',
-                  style: Get.theme.textTheme.labelLarge,
-                ),
+            Expanded(child: Image.network(product.image)),
+            ListTile(
+              title: Text(
+                product.title,
+                style: Get.theme.textTheme.labelLarge,
+                maxLines: 1,
+              ),
+              subtitle: Text(
+                product.description,
+                style: Get.theme.textTheme.labelSmall,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              trailing: Text(
+                '\$${product.price}',
+                style: Get.theme.textTheme.labelLarge,
               ),
             ),
           ],
