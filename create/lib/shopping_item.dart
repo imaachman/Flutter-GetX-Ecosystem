@@ -27,6 +27,9 @@ class ShoppingItem extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
+            // Do not allow negative values.
+            if (localController.quantity.value == 0) return;
+
             // Decrement quantity of local controller state.
             localController.quantity.value--;
 
