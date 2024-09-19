@@ -28,6 +28,9 @@ class ShoppingItem extends GetWidget<Controller> {
       children: [
         IconButton(
           onPressed: () {
+            // Do not allow negative values.
+            if (controller.quantity.value == 0) return;
+
             // Decrement quantity of local controller state.
             controller.quantity.value--;
 
