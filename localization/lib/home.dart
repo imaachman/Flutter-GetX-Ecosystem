@@ -7,6 +7,25 @@ import 'package:get/get.dart';
 class Home extends StatelessWidget {
   const Home({super.key});
 
+  /// Get the correct translation for count '4'.
+  /// Used in the plural translation of 'product' string.
+  String get countTranslation {
+    switch (Get.locale) {
+      case Locale(languageCode: 'en', countryCode: 'US'):
+        return 'four';
+      case Locale(languageCode: 'de', countryCode: 'DE'):
+        return 'vier';
+      case Locale(languageCode: 'fr', countryCode: 'FR'):
+        return 'quatre';
+      case Locale(languageCode: 'es', countryCode: 'ES'):
+        return 'cuatro';
+      case Locale(languageCode: 'ja', countryCode: 'JP'):
+        return '四';
+      default:
+        return 'four';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,9 +69,11 @@ class Home extends StatelessWidget {
 
               // Pluralization with [trPlural] extension.
               // The count is 4, so the plural form of the translation will be
-              // used and @count will be replaced by 'four'.
+              // used and @count will be replaced by 'four' or its counterparts
+              // from other languages.
               Text(
-                'product'.trPluralParams('products', 4, {'count': 'four'}),
+                'product'
+                    .trPluralParams('products', 4, {'count': countTranslation}),
                 style: Get.textTheme.displaySmall,
                 textAlign: TextAlign.center,
               ),
